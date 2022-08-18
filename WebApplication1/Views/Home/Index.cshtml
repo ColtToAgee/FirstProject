@@ -1,0 +1,29 @@
+﻿@using WebApplication1.Models;
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+
+
+
+@using (Html.BeginForm("Index","Home",FormMethod.Post))
+{
+<div>
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label">Kullanıcı Adı</label>
+            @Html.TextBox("Username",null,new {@class="form-control"})
+        </div>
+        <div style="margin-top:20px" class="form-group">
+            <label class="control-label">Şifre</label>
+            @Html.TextBox("Password", null, new {@class="form-control"})
+        </div>
+        <div style="margin-top:20px" class="form-group">
+            <button type="submit">Giris</button>
+        </div>
+    </div>
+</div>
+}
+
